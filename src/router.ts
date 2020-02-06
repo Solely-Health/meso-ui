@@ -15,7 +15,7 @@ export default new Router({
     {
       path:'/skills',
       name: 'skills',
-      component: Skills
+      component: Skills,
     },
     {
       path: '/about',
