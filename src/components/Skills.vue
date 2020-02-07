@@ -1,4 +1,8 @@
 <template>
+<v-container grid-list-xs>
+  <v-row align="center">
+    <h1>Add Skills</h1>
+  </v-row>
   <v-row align="center">
     <v-combobox
         v-model="model"
@@ -11,39 +15,31 @@
         persistent-hint
         small-chips
       >
-        
-          <v-list-item>
-            <v-list-item-content>
-              <v-list-item-title>
-                No results matching "<strong>{{ search }}</strong>". Press <kbd>enter</kbd> to create a new one
-              </v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title>
+              No results matching "<strong>{{ search }}</strong>". Press <kbd>enter</kbd> to create a new one
+            </v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
 
-      </v-combobox>
+    </v-combobox>
 
   </v-row>
+</v-container>
+  
   
 </template>
 <script lang="ts">
-import Vue from 'vue'
+import Vue from 'vue';
 export default Vue.extend({
   data() {
     return {
       items: ['Gaming', 'Programming', 'Vue', 'Vuetify'],
-      model: ['Vuetify'],
+      model: null,
       search: null,
-    }
+    };
   },
-  watch: {
-    model(val) {
-      if (val.length > 5) {
-        this.$nextTick(() => this.model.pop())
-      }
-    }
-  }
-
-  
-})
+});
 </script>
 
