@@ -39,24 +39,24 @@ const intervalsDefault = {
   height: 48,
 };
 
-const stylings = {
-  default(interval: any) {
-    return undefined;
-  },
-  workday(interval: any): any {
-    const inactive =
-      interval.weekday === 0 ||
-      interval.weekday === 6 ||
-      interval.hour < 9 ||
-      interval.hour >= 17;
-    const startOfHour = interval.minute === 0;
-    const mid = 'rgba(0,0,0,0.1)';
+// const stylings = {
+//   default(interval: any) {
+//     return undefined;
+//   },
+//   workday(interval: any): any {
+//     const inactive =
+//       interval.weekday === 0 ||
+//       interval.weekday === 6 ||
+//       interval.hour < 9 ||
+//       interval.hour >= 17;
+//     const startOfHour = interval.minute === 0;
+//     const mid = 'rgba(0,0,0,0.1)';
 
-    return {
-      borderTop: startOfHour ? undefined : '1px dashed ' + mid,
-    };
-  },
-};
+//     return {
+//       borderTop: startOfHour ? undefined : '1px dashed ' + mid,
+//     };
+//   },
+// };
 
 import Vue from 'vue';
 
@@ -92,82 +92,17 @@ export default Vue.extend({
       'Party',
     ],
     type: 'month',
-    typeOptions: [
-      { text: 'Day', value: 'day' },
-      { text: '4 Day', value: '4day' },
-      { text: 'Week', value: 'week' },
-      { text: 'Month', value: 'month' },
-      { text: 'Custom Daily', value: 'custom-daily' },
-      { text: 'Custom Weekly', value: 'custom-weekly' },
-    ],
     mode: 'stack',
-    modeOptions: [
-      { text: 'Stack', value: 'stack' },
-      { text: 'Column', value: 'column' },
-    ],
     weekdays: weekdaysDefault,
-    weekdaysOptions: [
-      { text: 'Sunday - Saturday', value: weekdaysDefault },
-      { text: 'Mon, Wed, Fri', value: [1, 3, 5] },
-      { text: 'Mon - Fri', value: [1, 2, 3, 4, 5] },
-      { text: 'Mon - Sun', value: [1, 2, 3, 4, 5, 6, 0] },
-    ],
     intervals: intervalsDefault,
-    intervalsOptions: [
-      { text: 'Default', value: intervalsDefault },
-      {
-        text: 'Workday',
-        value: { first: 16, minutes: 30, count: 20, height: 48 },
-      },
-    ],
     maxDays: 7,
-    maxDaysOptions: [
-      { text: '7 days', value: 7 },
-      { text: '5 days', value: 5 },
-      { text: '4 days', value: 4 },
-      { text: '3 days', value: 3 },
-    ],
     styleInterval: 'default',
-    styleIntervalOptions: [
-      { text: 'Default', value: 'default' },
-      { text: 'Workday', value: 'workday' },
-      { text: 'Past', value: 'past' },
-    ],
     color: 'primary',
-    colorOptions: [
-      { text: 'Primary', value: 'primary' },
-      { text: 'Secondary', value: 'secondary' },
-      { text: 'Accent', value: 'accent' },
-      { text: 'Red', value: 'red' },
-      { text: 'Pink', value: 'pink' },
-      { text: 'Purple', value: 'purple' },
-      { text: 'Deep Purple', value: 'deep-purple' },
-      { text: 'Indigo', value: 'indigo' },
-      { text: 'Blue', value: 'blue' },
-      { text: 'Light Blue', value: 'light-blue' },
-      { text: 'Cyan', value: 'cyan' },
-      { text: 'Teal', value: 'teal' },
-      { text: 'Green', value: 'green' },
-      { text: 'Light Green', value: 'light-green' },
-      { text: 'Lime', value: 'lime' },
-      { text: 'Yellow', value: 'yellow' },
-      { text: 'Amber', value: 'amber' },
-      { text: 'Orange', value: 'orange' },
-      { text: 'Deep Orange', value: 'deep-orange' },
-      { text: 'Brown', value: 'brown' },
-      { text: 'Blue Gray', value: 'blue-gray' },
-      { text: 'Gray', value: 'gray' },
-      { text: 'Black', value: 'black' },
-    ],
     shortIntervals: true,
     shortMonths: false,
     shortWeekdays: false,
   }),
   computed: {
-    intervalStyle() {
-      // @ts-ignore
-      return stylings[this.styleInterval].bind(this);
-    },
     hasIntervals() {
       return (
         this.type in
@@ -196,9 +131,6 @@ export default Vue.extend({
     },
     getEventColor(event) {
       return event.color;
-    },
-    showIntervalLabel(interval) {
-      return interval.minute === 0;
     },
     getEvents({ start, end }) {
       const events = [];
