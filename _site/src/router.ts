@@ -1,8 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
-import Login from './components/Login.vue';
-import SignUp from './components/SignUp.vue';
 
 Vue.use(Router);
 
@@ -22,14 +20,8 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
     },
     {
-      path: '/login',
-      name: 'login',
-      component: Login,
-    },
-    {
-      path: '/signup',
-      name: 'signup',
-      component: SignUp,
+      path: '/',
+      name: ''
     },
   ],
 });
