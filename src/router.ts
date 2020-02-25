@@ -3,7 +3,7 @@ import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Skills from './components/Skills.vue';
 import Location from './components/Location.vue';
-
+import RegistrationComplete from './views/registration_complete/Registration_Complete.vue';
 Vue.use(Router);
 
 export default new Router({
@@ -17,6 +17,11 @@ export default new Router({
       path: '/skills',
       name: 'skills',
       component: Skills,
+    },
+    {
+      path: '/complete',
+      name: 'complete',
+      component: RegistrationComplete,
     },
     {
       path: '/about',
