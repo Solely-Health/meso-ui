@@ -4,10 +4,10 @@
       text-center
       wrap>
     
-    <h1>Register</h1>
+    <h1>Sign Up</h1>
 
       <v-container fill-height fluid>
-        <v-row align="center" justify="center">
+        <v-row align="center" justify="center" md="8" xs="12">
         <v-col alight="center" justify="center">
           <v-form class="px-5">
             <p>email</p>
@@ -27,7 +27,7 @@
       <v-layout>
         <v-row align="center" justify="center">
           <v-btn color="#6A8EAE">Back </v-btn>
-          <v-btn>Next</v-btn>
+          <v-btn click='inc'>Next</v-btn>
         </v-row>
       </v-layout>
       </v-container>
