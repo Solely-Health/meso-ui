@@ -91,23 +91,21 @@ export default Vue.extend({
       max: 100,
       mileRadius: 40,
       range: [0, 100],
-      
     };
   },
   methods: {
     getUserLocation: function() {
-        navigator.geolocation.getCurrentPosition(pos => {
-        this.location = pos.coords
-        console.log(pos);
-      }, err => {
-        console.log(err);
+        navigator.geolocation.getCurrentPosition((pos) => {
+        this.location = pos.coords;
+        // console.log(pos);
+      }, (err) => {
+        // console.log(err);
       });
     },
     getZipcodeLocation: function() {
-      this.location = zipcodes.lookup(this.zipCode)
-      console.log(this.location)
-    }  
-  } 
+      this.location = zipcodes.lookup(this.zipCode);
+    },
+  },
 });
 </script>
 

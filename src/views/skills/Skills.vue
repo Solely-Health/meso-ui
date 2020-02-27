@@ -1,16 +1,17 @@
 <template>
 <v-container grid-list-xs>
-  <v-row align="center">
-    <h1>Add Skills</h1>
+  <v-row justify="center">
+    <h1 class="align-center">Add Skills</h1>
   </v-row>
-  <v-row align="center">
-    <v-combobox
-        v-model="model"
+  <v-row justify="center">
+    <v-col col="6" sm="6">
+      <v-combobox
+        v-model="skillsList"
         :items="items"
         :search-input.sync="search"
         hide-selected
-        hint="Maximum of 5 tags"
-        label="Add some tags"
+        label="Add your skills"
+
         multiple
         persistent-hint
         small-chips
@@ -22,24 +23,46 @@
             </v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-
-    </v-combobox>
-
+      </v-combobox>
+    </v-col>
   </v-row>
-</v-container>
+  <v-footer
+      absolute
+      class="font-weight-medium navigator-footer"
+    >
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+        <Navigator></Navigator>
   
+      </v-col>
+    </v-footer>
+</v-container>
+
+
   
 </template>
 <script lang="ts">
 import Vue from 'vue';
+import Navigator from './../../components/global/Navigator/Navigator.vue';
+
 export default Vue.extend({
+  name: 'skills',
+
   data() {
     return {
       items: ['Gaming', 'Programming', 'Vue', 'Vuetify'],
-      model: null,
+      skillsList: null,
       search: null,
     };
+  },
+  components: {
+    Navigator,
   },
 });
 </script>
 
+<style lang="scss">
+  @import './_Skills.scss';
+</style>

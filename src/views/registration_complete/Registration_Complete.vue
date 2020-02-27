@@ -26,16 +26,17 @@
 </v-container>
 </template>
 
-<style lang="scss">
-@import "./_Registration_Complete.scss";
-</style>
+
 <script lang="ts">
 import Navigator from './../../components/global/Navigator/Navigator.vue';
 import Vue from 'vue';
 export default Vue.extend({
   components: {
-    Navigator
-  }
+    Navigator,
+  },
 });
 </script>
 
+<style lang="scss">
+@import "./_Registration_Complete.scss";
+</style>
