@@ -1,14 +1,14 @@
 
 <template>
 <div class="">
-        <v-btn style="width: 8rem;" class="text-center mr-10" large >
-          <i class="fas fa-chevron-left"></i>
+        <v-btn color="white" :to="{name: previousRoute}" style="width: 8rem;" class="text-center mr-10" large >
+          <i class="fa fa-chevron-left"></i>
             Previous
           </v-btn>
 
-        <v-btn style="width: 8rem;" class="text-center" large color="primary">
-          Next  
-          <i class="fas fa-chevron-right"></i>     
+        <v-btn :to="{name: nextRoute}" style="width: 8rem;" class="text-center" large color="primary">
+          Next 
+          <i class="fa fa-chevron-right"></i>     
 
         </v-btn>
       </div>
@@ -16,8 +16,11 @@
 
 <script>
 export default {
-
-}
+  props: {
+    previousRoute: String,
+    nextRoute: String,
+  },
+};
 </script>
 
 <style>

@@ -34,7 +34,7 @@
         class="text-center"
         cols="12"
       >
-        <Navigator></Navigator>
+        <Navigator previousRoute="registration" nextRoute="location"></Navigator>
   
       </v-col>
     </v-footer>
@@ -45,7 +45,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue';
-import Navigator from './../../components/global/Navigator/Navigator.vue';
+import Navigator from './../../components/global/navigator/Navigator.vue';
 
 export default Vue.extend({
   name: 'skills',

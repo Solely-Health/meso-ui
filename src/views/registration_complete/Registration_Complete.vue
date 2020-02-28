@@ -28,13 +28,8 @@
 
 
 <script lang="ts">
-import Navigator from './../../components/global/Navigator/Navigator.vue';
 import Vue from 'vue';
-export default Vue.extend({
-  components: {
-    Navigator,
-  },
-});
+export default Vue.extend({});
 </script>
 
 <style lang="scss">

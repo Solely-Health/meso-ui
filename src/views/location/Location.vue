@@ -13,9 +13,12 @@
         <v-list-item three-line>
           <v-list-item-avatar
             tile
+            outline
             size="80"
-            color="grey"
-          ></v-list-item-avatar>
+            
+          >
+            <v-img max-height="45" max-width="45"  src="./../../assets/map-pin.png" />
+          </v-list-item-avatar>
           <v-list-item-content>
             <v-list-item-title color="black">Use my current Location</v-list-item-title>
           </v-list-item-content>      
@@ -75,14 +78,31 @@
           </v-col>
       </v-row>
 
+  <v-footer
+      absolute
+      class="font-weight-medium navigator-footer"
+    >
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+        <Navigator previousRoute="skills" nextRoute="complete"></Navigator>
+  
+      </v-col>
+  </v-footer>
+
 </v-container>
   
   
 </template>
 <script lang="ts">
 import Vue from 'vue';
-var zipcodes = require('zipcodes');
+import Navigator from './../../components/global/navigator/Navigator.vue';
+const zipcodes = require('zipcodes');
 export default Vue.extend({
+  components: {
+    Navigator,
+  },
   data() {
     return {
       location: {},
@@ -108,4 +128,8 @@ export default Vue.extend({
   },
 });
 </script>
+
+<style lang="scss">
+  @import './_Location.scss';
+</style>
 
