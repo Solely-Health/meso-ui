@@ -1,36 +1,44 @@
 <template>
-  <v-container>
-    <v-layout
-      text-center
-      wrap>
-    
-    <h1>MeSo</h1>
-      <!-- <v-flex mb-4>
-        <v-form class="px-3">
-          <v-text-field label="Email">
-          </v-text-field>
-          <v-text-field label="Password"></v-text-field>
-        </v-form>
-      </v-flex> -->
-      <v-container fill-height fluid>
-        <v-row align="center" justify="center">
-        <v-col alight="center" justify="center">
-          <v-form class="px-5">
-            <v-text-field label="Email" outlined dense></v-text-field>
-            <v-text-field :type="'password'" label="Password" outlined dense></v-text-field>
-            <a href="">Forgot your Password? </a>
-          </v-form>
-        </v-col>
-        </v-row>
-      </v-container>
-      <v-container>
-      <v-layout>
-        <v-row align="center" justify="center">
-          <v-btn color="#6A8EAE">Login </v-btn>
-          <v-btn>Sign Up</v-btn>
-        </v-row>
-      </v-layout>
-      </v-container>
-    </v-layout>
-  </v-container>
+    <v-container fill-height fluid>
+        <v-layout justify-center >
+            <v-flex xs10 md4>
+                <h1>Login</h1>
+                <v-col center>
+                    <v-form>
+                        <v-text-field label="Email" outlined dense></v-text-field>
+                        <v-text-field :type="'password'" label="Password" outlined dense></v-text-field>
+                        <a href="" target="_blank">Forgot your Password?</a>
+                    </v-form>
+                    <v-col center>
+                        <v-row> <v-btn>Login</v-btn> </v-row>
+                        <v-row> <v-btn>Sign Up</v-btn> </v-row>
+                    </v-col>
+                </v-col>
+            </v-flex>
+        </v-layout>
+    </v-container>
 </template>
+
+<script lang="ts">
+import Vue from 'vue';
+export default Vue.extend({
+  data() {
+    return {
+      email: '',
+      password: '',
+    };
+  },
+  // methods: {
+  //   forgotPassword: function() {
+  //     alert('this name is ' + this.firstName);
+  //   },
+ // signUp: function() {
+
+// }
+  // },
+});
+</script>
+
+<style lang="scss">
+  @import './Login.scss';
+</style>
