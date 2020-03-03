@@ -10,9 +10,10 @@
                         <a href="" target="_blank">Forgot your Password?</a>
                     </v-form>
 
+                <div class="spacing">
                 <v-row justify="center">
                     <div class="my-3">
-                    <v-btn x-large> LOGIN </v-btn>
+                    <v-btn x-large color="primary"> LOGIN </v-btn>
                     </div>
                 </v-row>
 
@@ -21,6 +22,7 @@
                     <v-btn x-large> SIGN UP </v-btn>
                     </div>
                 </v-row>
+                </div>
 
                 <div class="center">
                 <a href="" target="_blank">Faculty Login</a>
@@ -53,10 +55,10 @@ export default Vue.extend({
     };
   },
   // methods: {
-  //   forgotPassword: function() {
+  //   clickLogin: function() {
   //     alert('this name is ' + this.firstName);
   //   },
- // signUp: function() {
+//     signUp: function() {
 
 // }
   // },
