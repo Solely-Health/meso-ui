@@ -1,5 +1,5 @@
 <template>
-  <v-sheet height="600">
+  <v-sheet>
     <v-calendar
       ref="calendar"
       v-model="start"
@@ -10,15 +10,8 @@
       :max-days="maxDays"
       :now="now"
       :weekdays="weekdays"
-      :first-interval="intervals.first"
-      :interval-minutes="intervals.minutes"
-      :interval-count="intervals.count"
-      :interval-height="intervals.height"
-      :interval-style="intervalStyle"
-      :show-interval-label="showIntervalLabel"
-      :short-intervals="shortIntervals"
-      :short-months="shortMonths"
-      :short-weekdays="shortWeekdays"
+      :short-months="true"
+      :short-weekdays="true"
       :color="color"
       :events="events"
       :event-overlap-mode="mode"
@@ -30,14 +23,7 @@
 </template>
 
 <script lang="ts">
-const weekdaysDefault = [1, 2, 3, 4, 5, 6];
-
-const intervalsDefault = {
-  first: 0,
-  minutes: 60,
-  count: 24,
-  height: 48,
-};
+const weekdaysDefault = [0, 1, 2, 3, 4, 5, 6];
 
 // const stylings = {
 //   default(interval: any) {
@@ -63,10 +49,14 @@ import Vue from 'vue';
 export default Vue.extend({
   name: 'Calendar',
 
+  props: {
+      start: String,
+      end: String,
+      events: [],
+  },
+
   data: () => ({
-    startMenu: false,
-    start: '2019-01-12',
-    endMenu: false,
+    start: '2018-12-12',
     end: '2019-01-27',
     nowMenu: false,
     minWeeks: 1,
@@ -94,13 +84,9 @@ export default Vue.extend({
     type: 'month',
     mode: 'stack',
     weekdays: weekdaysDefault,
-    intervals: intervalsDefault,
     maxDays: 7,
     styleInterval: 'default',
     color: 'primary',
-    shortIntervals: true,
-    shortMonths: false,
-    shortWeekdays: false,
   }),
   computed: {
     hasIntervals() {
