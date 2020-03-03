@@ -97,7 +97,7 @@
 </template>
 <script lang="ts">
 import Vue from 'vue';
-import Navigator from './../../components/global/navigator/Navigator.vue';
+import Navigator from '../../components/global/Navigator/Navigator.vue';
 const zipcodes = require('zipcodes');
 export default Vue.extend({
   components: {
@@ -114,15 +114,14 @@ export default Vue.extend({
     };
   },
   methods: {
-    getUserLocation: function() {
+    getUserLocation() {
         navigator.geolocation.getCurrentPosition((pos) => {
         this.location = pos.coords;
-        // console.log(pos);
       }, (err) => {
         // console.log(err);
       });
     },
-    getZipcodeLocation: function() {
+    getZipcodeLocation() {
       this.location = zipcodes.lookup(this.zipCode);
     },
   },
