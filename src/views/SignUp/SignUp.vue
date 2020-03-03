@@ -2,7 +2,7 @@
   <v-container fill-height fluid>
     <v-layout align-center justify-center>
           <v-flex wrap center xs10 md4>
-            <h1> Sign Up </h1>
+            <h1> Register </h1>
             <v-col center>
               <v-form>
                 <v-text-field v-model="email" label="Email" outlined dense></v-text-field>

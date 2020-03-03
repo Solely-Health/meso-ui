@@ -1,21 +1,45 @@
+
 <template>
-    <v-container fill-height fluid>
-        <v-layout justify-center >
+    <v-container class="my-5">
+        <v-layout justify-center row>
             <v-flex xs10 md4>
                 <h1>Login</h1>
-                <v-col center>
                     <v-form>
                         <v-text-field label="Email" outlined dense></v-text-field>
                         <v-text-field :type="'password'" label="Password" outlined dense></v-text-field>
                         <a href="" target="_blank">Forgot your Password?</a>
                     </v-form>
-                    <v-col center>
-                        <v-row> <v-btn>Login</v-btn> </v-row>
-                        <v-row> <v-btn>Sign Up</v-btn> </v-row>
-                    </v-col>
-                </v-col>
+
+                <v-row justify="center">
+                    <div class="my-3">
+                    <v-btn x-large> LOGIN </v-btn>
+                    </div>
+                </v-row>
+
+                <v-row justify="center">
+                    <div class="my-2">
+                    <v-btn x-large> SIGN UP </v-btn>
+                    </div>
+                </v-row>
+
+                <div class="center">
+                <a href="" target="_blank">Faculty Login</a>
+                </div>
             </v-flex>
+
+            <!-- <v-flex>
+                <v-btn> LOGIN </v-btn>
+            </v-flex> -->
         </v-layout>
+
+            <!-- <v-row justify="center">
+                <v-btn> LOGIN </v-btn>
+            </v-row>
+
+            <v-row justify="center">
+                <v-btn> SIGN UP </v-btn>
+            </v-row> -->
+
     </v-container>
 </template>
 
