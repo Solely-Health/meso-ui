@@ -8,13 +8,13 @@
 import Vue from 'vue';
 import Calendar from '../components/Calendar/Calendar.vue';
 
-//Load sample data
+// Load sample data
 import { sampleCalendar } from './utils/sampleData';
 
 export default Vue.extend({
   name: 'Home',
   data: () => ({
-    calendar: sampleCalendar
+    calendar: sampleCalendar,
   }),
   components: {
     Calendar,
