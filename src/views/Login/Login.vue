@@ -5,8 +5,8 @@
             <v-flex xs10 md4>
                 <h1>Login</h1>
                     <v-form>
-                        <v-text-field label="Email" outlined dense></v-text-field>
-                        <v-text-field :type="'password'" label="Password" outlined dense></v-text-field>
+                        <v-text-field label="Email" v-model="email" outlined dense></v-text-field>
+                        <v-text-field :type="'password'" label="Password" v-model="password" outlined dense></v-text-field>
                         <a href="" target="_blank">Forgot your Password?</a>
                     </v-form>
 
