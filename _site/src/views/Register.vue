@@ -1,17 +1,16 @@
 <template>
-  <HelloWorld />
+  <p>testing</p>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
-import HelloWorld from '../components/HelloWorld.vue';
+import SignUp from '../components/SignUp.vue';
 
 export default Vue.extend({
-  name: 'Home',
+  name: 'Register',
 
   components: {
-    HelloWorld,
-
+    SignUp,
   },
 });
 </script>
