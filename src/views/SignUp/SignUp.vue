@@ -11,7 +11,7 @@
                 <v-select :items="education" v-model="currEducation" label="Education" outlined dense></v-select>
                 <v-select :items="subject" v-model="currSubject" label="Subject" outlined dense></v-select>
                 <v-text-field v-model="password" :type="'password'" label="Password" outlined dense></v-text-field>
-                <v-text-field :type="'password'" label="Confirm Password" outlined dense></v-text-field>
+                <v-text-field :type="'password'" v-model="confirmPass" label="Confirm Password" outlined dense></v-text-field>
               </v-form>
             </v-col>
           </v-flex>
@@ -33,7 +33,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import Navigator from './../../components/global/Navigator/Navigator.vue'
+import Navigator from './../../components/global/Navigator/Navigator.vue';
 export default Vue.extend({
   data() {
     return {
@@ -45,11 +45,12 @@ export default Vue.extend({
       subject: ['testSubject1', 'testSubject2', 'testSubject3'],
       currSubject: '',
       password: '',
+      confirmPass: '',
     };
   },
   components: {
     Navigator,
-  }
+  },
   // methods: {
   //   displayName: function() {
   //     alert('this name is ' + this.firstName);
