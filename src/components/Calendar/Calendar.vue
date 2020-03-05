@@ -28,7 +28,7 @@ export default Vue.extend({
   props: {
       start: String,
       end: String,
-      events: [],
+      events: Array,
   },
 
   data: () => ({
