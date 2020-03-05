@@ -14,7 +14,8 @@
     "types": [
       "webpack-env",
       "jest",
-      "Vuetify",
+      "vuetify",
+      "vue-browser-geolocation",
     ],
     "paths": {
       "@/*": [

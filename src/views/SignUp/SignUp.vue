@@ -8,8 +8,8 @@
                 <v-text-field v-model="email" label="Email" outlined dense></v-text-field>
                 <v-text-field v-model="firstName" label="First Name" outlined dense></v-text-field>
                 <v-text-field v-model="lastName" label="Last Name" outlined dense></v-text-field>
-                <v-select :items="education" v-model="education" label="Education" outlined dense></v-select>
-                <v-select :items="subject" v-model="subject" label="Subject" outlined dense></v-select>
+                <v-select :items="education" v-model="currEducation" label="Education" outlined dense></v-select>
+                <v-select :items="subject" v-model="currSubject" label="Subject" outlined dense></v-select>
                 <v-text-field v-model="password" :type="'password'" label="Password" outlined dense></v-text-field>
                 <v-text-field :type="'password'" label="Confirm Password" outlined dense></v-text-field>
               </v-form>
@@ -27,8 +27,10 @@ export default Vue.extend({
       email: '',
       firstName: '',
       lastName: '',
-      education: ['California, State University Northridge', 'Hogwarts'],
+      education: ['California, State University Northridge', 'cheese'],
+      currEducation: '',
       subject: ['testSubject1', 'testSubject2', 'testSubject3'],
+      currSubject: '',
       password: '',
     };
   },
