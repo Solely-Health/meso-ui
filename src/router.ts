@@ -2,6 +2,9 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Dashboard from './views/Dashboard.vue';
+import Login from './views/Login/Login.vue';
+import SignUp from './views/SignUp/SignUp.vue';
+import Logo from './components/Logo.vue'
 
 import Skills from './views/skills/Skills.vue';
 import Location from './views/location/Location.vue';
@@ -13,7 +16,8 @@ export default new Router( {
     {
       path: '/',
       name: 'home',
-      component: Home,
+      component: Home, 
+      redirect: '/login',
     },
     {
       path: '/skills',
@@ -37,6 +41,21 @@ export default new Router( {
       path: '/dashboard',
       name: 'dashboard',
       component: Dashboard,
+    },
+    {
+      path: '/login',
+      name: 'login',
+      component: Login,
+    },
+    {
+      path: '/signup',
+      name: 'signup',
+      component: SignUp,
+    },
+    {
+      path: '/logo',
+      name: 'logo',
+      component: Logo,
     },
     {
       path: '/location',
