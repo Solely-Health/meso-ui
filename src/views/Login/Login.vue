@@ -19,7 +19,7 @@
 
                 <v-row justify="center">
                     <div class="my-2">
-                    <v-btn x-large> SIGN UP </v-btn>
+                    <v-btn x-large :to="{name: 'signup'}"> SIGN UP </v-btn>
                     </div>
                 </v-row>
                 </div>
@@ -54,14 +54,11 @@ export default Vue.extend({
       password: '',
     };
   },
-  // methods: {
-  //   clickLogin: function() {
-  //     alert('this name is ' + this.firstName);
-  //   },
+//   methods: {
 //     signUp: function() {
-
-// }
-  // },
+//       alert('this name is ' + this.firstName);
+//       router.go()
+//     },
 });
 </script>
 

@@ -16,11 +16,24 @@
             </v-col>
           </v-flex>
     </v-layout>
+    <v-footer
+      absolute
+      class="font-weight-medium navigator-footer"
+    >
+      <v-col
+        class="text-center"
+        cols="12"
+      >
+        <Navigator previousRoute="login" nextRoute="certs"></Navigator>
+  
+      </v-col>
+    </v-footer>
   </v-container>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
+import Navigator from './../../components/global/Navigator/Navigator.vue'
 export default Vue.extend({
   data() {
     return {
@@ -34,6 +47,9 @@ export default Vue.extend({
       password: '',
     };
   },
+  components: {
+    Navigator,
+  }
   // methods: {
   //   displayName: function() {
   //     alert('this name is ' + this.firstName);
