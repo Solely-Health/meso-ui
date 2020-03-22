@@ -1,12 +1,13 @@
 <template>
 <div>
     <v-card
-      color="grey lighten-4"
+      color="grey lighten-2"
       flat
       height="80"
       tile
     >
-      <v-toolbar dense height="80">
+      
+      <v-toolbar dense height="80" color="grey lighten-4">
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <v-toolbar-title>Dashboard</v-toolbar-title>
         <v-spacer></v-spacer>
