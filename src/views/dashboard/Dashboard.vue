@@ -25,7 +25,7 @@
       >
         <v-list-item class="mt-5">
           <v-list-item-avatar>
-            <v-img src="https://randomuser.me/api/portraits/men/78.jpg"></v-img>
+            <v-img src="https://media-exp1.licdn.com/dms/image/C5603AQHK_Xl80cwTeg/profile-displayphoto-shrink_800_800/0?e=1590624000&v=beta&t=OJ67_vNLfcBQjy2nZfTOBCW2eW3McrOOjWaQlzMtGj4"></v-img>
           </v-list-item-avatar>
   
           <v-list-item-content>

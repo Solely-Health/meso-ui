@@ -2,7 +2,7 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Dashboard from './views/dashboard/Dashboard.vue';
 import Login from './views/Login/Login.vue';
-import SignUp from './views/signUp/SignUp.vue';
+import SignUp from './views/SignUp/SignUp.vue';
 import Logo from './components/Logo.vue';
 
 import Skills from './views/skills/Skills.vue';
@@ -12,10 +12,10 @@ Vue.use( Router );
 
 export default new Router( {
   routes: [
-    {
-      path: '/',
-      redirect: '/login',
-    },
+    // {
+    //   path: '/',
+    //   redirect: '/login',
+    // },
     {
       path: '/skills',
       name: 'skills',
