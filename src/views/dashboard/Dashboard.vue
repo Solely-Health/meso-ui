@@ -7,7 +7,7 @@
       tile
     >
       
-      <v-toolbar dense height="80" color="grey lighten-4">
+      <v-toolbar dense height="80" color="grey lighten-3">
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <v-toolbar-title>Dashboard</v-toolbar-title>
         <v-spacer></v-spacer>
