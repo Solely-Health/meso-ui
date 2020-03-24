@@ -1,6 +1,6 @@
 <template>
-    <container>
-        <layout align-center justify-center>
+    <v-container>
+        <v-layout align-center justify-center>
             <v-card @click="facilityPage" class="ma-5">
                 <v-img 
                     src="https://media.istockphoto.com/vectors/abstract-city-map-illustration-vector-id978532440?k=6&m=978532440&s=612x612&w=0&h=1cgxKx9pht03k-Jb5s-dFDGyfEASzYEc3Nt0jkZjoIc=" 
@@ -20,8 +20,8 @@
                     <v-btn outlined right> Contact </v-btn>
                 </v-card-actions>
             </v-card>
-        </layout>
-    </container>
+        </v-layout>
+    </v-container>
 </template>
 
 <script lang="ts">
