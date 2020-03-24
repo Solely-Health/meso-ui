@@ -98,7 +98,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Navigator from '../../components/global/Navigator/Navigator.vue';
-const zipcodes = require('zipcodes');
+const zipcodes =  require('zipcodes');
 export default Vue.extend({
   components: {
     Navigator,

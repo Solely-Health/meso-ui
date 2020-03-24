@@ -1,19 +1,19 @@
 <template>
-    <v-calendar
-      ref="calendar"
-      v-model="start"
-      :type="type"
-      :start="start"
-      :end="end"
-      :weekdays="weekdays"
-      :short-months="true"
-      :short-weekdays="true"
-      :color="color"
-      :events="events"
-      :event-color="getEventColor"
-      :event-overlap-mode="mode"
-      :event-overlap-threshold="45"
-    ></v-calendar>
+  <v-calendar
+    ref="calendar"
+    v-model="start"
+    :type="type"
+    :start="start"
+    :end="end"
+    :weekdays="weekdays"
+    :short-months="true"
+    :short-weekdays="true"
+    :color="color"
+    :events="events"
+    :event-color="getEventColor"
+    :event-overlap-mode="mode"
+    :event-overlap-threshold="45"
+  q></v-calendar>
 </template>
 
 <script lang="ts">
