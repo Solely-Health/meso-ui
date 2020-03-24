@@ -40,6 +40,7 @@
           <v-list-item
             v-for="item in items"
             :key="item.title"
+            :to="item.link"
             link
             dark
             class="mt-4"
@@ -49,7 +50,7 @@
               <v-icon>{{ item.icon }}</v-icon>
             </v-list-item-icon>
   
-            <v-list-item-content>
+            <v-list-item-content class="text-left">
               <v-list-item-title >{{ item.title }}</v-list-item-title>
             </v-list-item-content>
           </v-list-item>
@@ -74,11 +75,11 @@ export default Vue.extend({
     drawer: false,
     group: null,
     items: [
-        { title: 'Dashboard', icon: 'mdi-view-dashboard' },
-        { title: 'My Profile', icon: 'mdi-account' },
-        {title: 'Discover', icon: 'mdi-briefcase'},
-        {title: 'Scheduling', icon: 'mdi-calendar-blank'},
-        { title: 'Logout', icon: 'mdi-logout' },
+        { title: 'Dashboard', icon: 'mdi-view-dashboard', link: 'dashboard' },
+        { title: 'My Profile', icon: 'mdi-account', link: 'profile' },
+        {title: 'Discover', icon: 'mdi-briefcase', link: 'discover'},
+        {title: 'Scheduling', icon: 'mdi-calendar-blank', link: 'schedule'},
+        { title: 'Logout', icon: 'mdi-logout', link: 'login' },
       ],
   }),
   components: {
