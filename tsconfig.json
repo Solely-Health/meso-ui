@@ -10,12 +10,12 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "sourceMap": true,
+    "noImplicitAny": false,
     "baseUrl": ".",
     "types": [
       "webpack-env",
       "jest",
       "vuetify",
-      "vue-browser-geolocation",
     ],
     "paths": {
       "@/*": [
@@ -27,7 +27,11 @@
       "dom",
       "dom.iterable",
       "scripthost"
-    ]
+    ],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./node_modules/vuetify/types"
+    ],
   },
   "include": [
     "src/**/*.ts",
@@ -38,5 +42,5 @@
   ],
   "exclude": [
     "node_modules"
-  ]
+  ],
 }

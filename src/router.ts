@@ -1,22 +1,19 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import Home from './views/Home.vue';
-import Login from './views/Login/Login.vue';
-import SignUp from './views/SignUp/SignUp.vue';
-import Logo from './components/Logo.vue';
 import FacilityCard from './components/FacilityCard/FacilityCard.vue';
-
+import Dashboard from './views/dashboard/Dashboard.vue';
+import Login from './views/login/Login.vue';
+import SignUp from './views/signUp/SignUp.vue';
+import Logo from './components/Logo.vue';
 import Skills from './views/skills/Skills.vue';
 import Location from './views/location/Location.vue';
 import RegistrationComplete from './views/registration_complete/Registration_Complete.vue';
-Vue.use(Router);
+Vue.use( Router );
 
-export default new Router({
+export default new Router( {
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: Home, 
       redirect: '/login',
     },
     {
@@ -30,12 +27,9 @@ export default new Router({
       component: RegistrationComplete,
     },
     {
-      path: '/about',
-      name: 'about',
-      // route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "about" */ './views/About.vue'),
+      path: '/dashboard',
+      name: 'dashboard',
+      component: Dashboard,
     },
     {
       path: '/login',
@@ -61,6 +55,6 @@ export default new Router({
       path: '/facilitycard',
       name: 'facilitycard',
       component: FacilityCard,
-    }
+    },
   ],
-});
+} );
