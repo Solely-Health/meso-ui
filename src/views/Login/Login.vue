@@ -28,20 +28,7 @@
                 <a href="" target="_blank">Faculty Login</a>
                 </div>
             </v-flex>
-
-            <!-- <v-flex>
-                <v-btn> LOGIN </v-btn>
-            </v-flex> -->
         </v-layout>
-
-            <!-- <v-row justify="center">
-                <v-btn> LOGIN </v-btn>
-            </v-row>
-
-            <v-row justify="center">
-                <v-btn> SIGN UP </v-btn>
-            </v-row> -->
-
     </v-container>
 </template>
 
