@@ -34,7 +34,7 @@
         class="text-center"
         cols="12"
       >
-        <Navigator previousRoute="registration" nextRoute="location"></Navigator>
+        <Navigator previousRoute="license" nextRoute="location"></Navigator>
   
       </v-col>
     </v-footer>

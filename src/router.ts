@@ -2,10 +2,10 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import Home from './views/Home.vue';
 import Dashboard from './views/Dashboard.vue';
-import Login from './views/Login/Login.vue';
-import SignUp from './views/SignUp/SignUp.vue';
-import Logo from './components/Logo.vue'
-
+import Login from './views/login/Login.vue';
+import SignUp from './views/signUp/SignUp.vue';
+import Logo from './components/Logo.vue';
+import License from './views/license/License.vue';
 import Skills from './views/skills/Skills.vue';
 import Location from './views/location/Location.vue';
 import RegistrationComplete from './views/registration_complete/Registration_Complete.vue';
@@ -16,7 +16,7 @@ export default new Router( {
     {
       path: '/',
       name: 'home',
-      component: Home, 
+      component: Home,
       redirect: '/login',
     },
     {
@@ -61,6 +61,11 @@ export default new Router( {
       path: '/location',
       name: 'location',
       component: Location,
+    },
+    {
+      path: '/license',
+      name: 'license',
+      component: License,
     },
   ],
 } );
