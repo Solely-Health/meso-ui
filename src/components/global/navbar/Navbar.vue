@@ -7,7 +7,7 @@
       app
       >
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-        <v-toolbar-title>Dashboard</v-toolbar-title>
+        <v-toolbar-title>{{$route.name}}</v-toolbar-title>
         <v-spacer></v-spacer>
     </v-app-bar>
     <v-navigation-drawer
@@ -50,9 +50,6 @@
 
 <script>
 export default {
-  // props: {
-  //   drawer: Boolean,
-  // },
   data: () => ({
     name: 'Mikkal',
     drawer: false,

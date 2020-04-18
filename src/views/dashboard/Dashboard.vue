@@ -18,7 +18,6 @@ export default Vue.extend({
   data: () => ({
     name: 'Mikkal',
     calendar: sampleCalendar,
-    drawer: false,
     items: [
         { title: 'Dashboard', icon: 'mdi-view-dashboard', link: 'dashboard' },
         { title: 'My Profile', icon: 'mdi-account', link: 'profile' },

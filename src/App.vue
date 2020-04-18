@@ -16,7 +16,6 @@ export default Vue.extend({
   name: 'App',
 
   data: () => ({
-    drawer: false,
     hiddenNavbarRoutes: [
       'login',
       'signup',
