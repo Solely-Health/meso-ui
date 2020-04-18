@@ -8,6 +8,7 @@ import Logo from './components/Logo.vue';
 import Skills from './views/skills/Skills.vue';
 import Location from './views/location/Location.vue';
 import RegistrationComplete from './views/registration_complete/Registration_Complete.vue';
+import Discover from './views/discover/Discover.vue';
 Vue.use( Router );
 
 export default new Router( {
@@ -55,6 +56,11 @@ export default new Router( {
       path: '/facilitycard',
       name: 'facilitycard',
       component: FacilityCard,
+    },
+    {
+      path: '/discover',
+      name: 'discover',
+      component: Discover,
     },
   ],
 } );

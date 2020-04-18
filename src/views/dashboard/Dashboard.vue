@@ -5,8 +5,7 @@
       flat
       height="80"
       tile
-    >
-      
+    > 
       <v-toolbar dense height="80" color="grey lighten-3">
         <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
         <v-toolbar-title>Dashboard</v-toolbar-title>
@@ -32,7 +31,6 @@
             <v-list-item-title class="menuItem">{{name}}</v-list-item-title>
           </v-list-item-content>
         </v-list-item>
-  
         <v-divider></v-divider>
   
         <v-list>
