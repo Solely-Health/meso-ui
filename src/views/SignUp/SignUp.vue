@@ -24,7 +24,7 @@
         class="text-center"
         cols="12"
       >
-        <Navigator previousRoute="login" nextRoute="certs"></Navigator>
+        <Navigator previousRoute="login" nextRoute="licenses"></Navigator>
   
       </v-col>
     </v-footer>
