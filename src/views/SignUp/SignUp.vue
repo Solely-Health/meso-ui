@@ -24,7 +24,11 @@
         class="text-center"
         cols="12"
       >
+<<<<<<< HEAD
         <Navigator previousRoute="login" nextRoute="license"></Navigator>
+=======
+        <Navigator previousRoute="login" nextRoute="licenses"></Navigator>
+>>>>>>> dev
   
       </v-col>
     </v-footer>
