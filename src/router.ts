@@ -9,6 +9,7 @@ import Skills from './views/skills/Skills.vue';
 import Location from './views/location/Location.vue';
 import RegistrationComplete from './views/registration_complete/Registration_Complete.vue';
 import Profile from './views/profile/Profile.vue';
+import Discover from './views/discover/Discover.vue';
 Vue.use( Router );
 
 export default new Router( {
@@ -29,7 +30,7 @@ export default new Router( {
     },
     {
       path: '/dashboard',
-      name: 'dashboard',
+      name: 'Dashboard',
       component: Dashboard,
     },
     {
@@ -61,6 +62,11 @@ export default new Router( {
       path: '/profile',
       name: 'profile',
       component: Profile,
+    },
+    {
+      path: '/discover',
+      name: 'Discover',
+      component: Discover,
     },
   ],
 } );
