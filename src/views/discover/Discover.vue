@@ -53,7 +53,7 @@
             <v-list-item-subtitle no-gutters>11/27/2020</v-list-item-subtitle>
           </v-list-item-content>
         </v-list-item>
-        <v-card-actions class="p-0 m-0">
+        <v-card-actions class="px-0 py-0 m-0">
               <v-spacer></v-spacer>
 
               <v-btn class="mb-3 mr-3">
