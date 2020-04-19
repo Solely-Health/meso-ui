@@ -1,8 +1,9 @@
 import Vue from 'vue';
 import App from './App.vue';
 import router from './router';
-import store from './store';
+import store from './store/index';
 import vuetify from './plugins/vuetify';
+
 // import Vuetify from 'vuetify';
 // import 'vuetify/dist/vuetify.min.css';
 // Vue.use(Vuetify);
