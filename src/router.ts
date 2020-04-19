@@ -10,6 +10,7 @@ import Location from './views/location/Location.vue';
 import RegistrationComplete from './views/registration_complete/Registration_Complete.vue';
 import Profile from './views/profile/Profile.vue';
 import Discover from './views/discover/Discover.vue';
+import Position from './views/position/Position.vue';
 Vue.use( Router );
 
 export default new Router( {
@@ -67,6 +68,11 @@ export default new Router( {
       path: '/discover',
       name: 'Discover',
       component: Discover,
+    },
+    {
+      path: '/position',
+      name: 'Position',
+      component: Position,
     },
   ],
 } );
