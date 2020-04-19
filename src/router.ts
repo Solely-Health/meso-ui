@@ -29,7 +29,7 @@ export default new Router( {
     },
     {
       path: '/dashboard',
-      name: 'dashboard',
+      name: 'Dashboard',
       component: Dashboard,
     },
     {
@@ -59,7 +59,7 @@ export default new Router( {
     },
     {
       path: '/discover',
-      name: 'discover',
+      name: 'Discover',
       component: Discover,
     },
   ],
