@@ -1,6 +1,9 @@
 <template>
 <v-container grid-list-xs>
-  <h1 class="text-center mt-3 mb-3" >Set Search Range</h1>
+  <v-row justify="center">
+    <v-img src="./../../assets/meso_logo.svg" class="ma-5" contain max-width="225"></v-img>
+  </v-row>
+  <h2 class="text-center mt-3 mb-3" >Set Search Range</h2>
   <v-row>
     <v-col col="12">
         <v-card
@@ -11,14 +14,9 @@
         raised
       >
         <v-list-item three-line>
-          <v-list-item-avatar
-            tile
-            outline
-            size="80"
-            
-          >
-            <v-img max-height="45" max-width="45"  src="./../../assets/map-pin.png" />
-          </v-list-item-avatar>
+            <v-list-item-avatar tile rounded size="90" class="rounded">
+							<v-icon x-large class="grey lighten-3">mdi-map-marker</v-icon>
+						</v-list-item-avatar>
           <v-list-item-content>
             <v-list-item-title color="black">Use my current Location</v-list-item-title>
           </v-list-item-content>      
@@ -28,7 +26,7 @@
   </v-row>
   <v-row>
     <v-col col="12" >
-      <h2 class="text-center">Or</h2>
+      <h3 class="text-center">Or</h3>
     </v-col>
   </v-row>
   <v-row justify="center">
@@ -51,7 +49,7 @@
   </v-row>
   <v-row justify="center">
     <v-col col="12" sm="8" md="6">
-      <h2 class="text-center"> Search Radius (miles)</h2>
+      <h3 class="text-center"> Search Radius (miles)</h3>
     </v-col>
   </v-row>
 

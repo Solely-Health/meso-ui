@@ -1,7 +1,10 @@
 <template>
 <v-container grid-list-xs>
   <v-row justify="center">
-    <h1 class="align-center">Add Skills</h1>
+    <v-img src="./../../assets/meso_logo.svg" class="ma-5" contain max-width="225"></v-img>
+  </v-row>
+  <v-row justify="center">
+    <h2 class="text-center mt-3 mb-3">Add Skills</h2>
   </v-row>
   <v-row justify="center">
     <v-col col="6" sm="6">

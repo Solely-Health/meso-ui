@@ -1,8 +1,11 @@
 <template>
-  <v-container fill-height fluid>
-    <v-layout align-center justify-center>
-          <v-flex wrap center xs10 md4>
-            <h1> Register </h1>
+  <v-container fluid>
+    <v-row justify="center">
+      <v-img src="./../../assets/meso_logo.svg" class="ma-5" contain max-width="225"></v-img>
+    </v-row>
+    <v-layout class="mt-3" justify-center>
+          <v-flex center xs10 md4>
+            <h2 class="text-center mt-3 mb-3"> Register </h2>
             <v-col center>
               <v-form>
                 <v-text-field v-model="email" label="Email" outlined dense></v-text-field>
@@ -15,8 +18,7 @@
               </v-form>
             </v-col>
           </v-flex>
-    </v-layout>
-    <v-footer
+          <v-footer
       absolute
       class="font-weight-medium navigator-footer"
     >
@@ -24,14 +26,11 @@
         class="text-center"
         cols="12"
       >
-<<<<<<< HEAD
         <Navigator previousRoute="login" nextRoute="license"></Navigator>
-=======
-        <Navigator previousRoute="login" nextRoute="licenses"></Navigator>
->>>>>>> dev
   
       </v-col>
     </v-footer>
+    </v-layout>
   </v-container>
 </template>
 
