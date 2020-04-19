@@ -2,12 +2,13 @@ import Vue from 'vue';
 import Router from 'vue-router';
 import FacilityCard from './components/FacilityCard/FacilityCard.vue';
 import Dashboard from './views/dashboard/Dashboard.vue';
-import Login from './views/login/Login.vue';
-import SignUp from './views/signUp/SignUp.vue';
+import Login from './views/Login/Login.vue';
+import SignUp from './views/SignUp/SignUp.vue';
 import Logo from './components/Logo.vue';
 import Skills from './views/skills/Skills.vue';
 import Location from './views/location/Location.vue';
 import RegistrationComplete from './views/registration_complete/Registration_Complete.vue';
+import Profile from './views/profile/Profile.vue';
 Vue.use( Router );
 
 export default new Router( {
@@ -55,6 +56,11 @@ export default new Router( {
       path: '/facilitycard',
       name: 'facilitycard',
       component: FacilityCard,
+    },
+    {
+      path: '/profile',
+      name: 'profile',
+      component: Profile,
     },
   ],
 } );
