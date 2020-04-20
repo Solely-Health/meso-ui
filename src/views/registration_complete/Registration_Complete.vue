@@ -11,12 +11,12 @@
   </v-row>
   <v-row no-gutters justify="center">
       <div class="my-2">
-        <v-btn  class="text-center redirection-button" large color="primary">Go to My Profile</v-btn>
+        <v-btn  class="text-center redirection-button" large color="primary" router :to="{name: 'Profile'}">Go to My Profile</v-btn>
       </div>
   </v-row>
   <v-row no-gutters justify="center">
     <div class="my-2">
-        <v-btn  class="text-center redirection-button" large color="primary">Go to My Schedule</v-btn>
+        <v-btn  class="text-center redirection-button" large color="primary" router :to="{name: 'Dashboard'}">Go to My Schedule</v-btn>
       </div>
   </v-row>
 

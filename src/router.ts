@@ -4,6 +4,7 @@ import FacilityCard from './components/FacilityCard/FacilityCard.vue';
 import Dashboard from './views/dashboard/Dashboard.vue';
 import Login from './views/login/Login.vue';
 import SignUp from './views/signUp/SignUp.vue';
+import License from './views/license/License.vue';
 import Logo from './components/Logo.vue';
 import Skills from './views/skills/Skills.vue';
 import Location from './views/location/Location.vue';
@@ -53,6 +54,11 @@ export default new Router( {
       path: '/location',
       name: 'location',
       component: Location,
+    },
+    {
+      path: '/license',
+      name: 'license',
+      component: License,
     },
     {
       path: '/facilitycard',

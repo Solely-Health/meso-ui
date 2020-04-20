@@ -19,11 +19,10 @@ export default Vue.extend({
     hiddenNavbarRoutes: [
       'login',
       'signup',
-      'licenses',
+      'license',
       'skills',
       'location',
       'complete',
-      '',
     ],
   }),
   components: {
