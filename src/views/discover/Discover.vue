@@ -10,6 +10,8 @@
       :startTime="result.startTime"
       :endTime="result.endTime"
       :date="result.date"
+      router
+      :to="result.link"
       />
 	</v-container>
 </template>
@@ -27,6 +29,7 @@ export default Vue.extend({
         startTime: '10:00AM',
         endTime: '2:00PM',
         date: '4/20/2020',
+        link: 'facility',
       },
       {
         id: 2,
