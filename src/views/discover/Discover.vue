@@ -10,7 +10,7 @@
       :startTime="result.startTime"
       :endTime="result.endTime"
       :date="result.date"
-      ></job-thumbnail>
+      />
 	</v-container>
 </template>
 <script lang="ts">
