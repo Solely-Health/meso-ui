@@ -58,7 +58,7 @@ export default {
         { title: 'Dashboard', icon: 'mdi-view-dashboard', link: 'dashboard' },
         { title: 'My Profile', icon: 'mdi-account', link: 'profile' },
         {title: 'Discover', icon: 'mdi-briefcase', link: 'discover'},
-        {title: 'Scheduling', icon: 'mdi-calendar-blank', link: 'schedule'},
+        {title: 'Scheduling', icon: 'mdi-calendar-blank', link: 'discover'},
         { title: 'Logout', icon: 'mdi-logout', link: 'login' },
       ],
   }),

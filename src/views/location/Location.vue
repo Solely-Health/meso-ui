@@ -53,80 +53,66 @@
     </v-col>
   </v-row>
 
-  <v-row>
-        <v-col class="pr-4">
-            <v-slider
-              v-model="mileRadius"
-              class="align-center"
-              :max="max"
-              :min="min"
-              hide-details
-            >
-              <template v-slot:append>
-                <v-text-field
-                  v-model="mileRadius"
-                  class="mt-0 pt-0"
-                  hide-details
-                  single-line
-                  type="number"
-                  style="width: 60px"
-                ></v-text-field>
-              </template>
-            </v-slider>
-          </v-col>
-      </v-row>
+		<v-row>
+			<v-col class="pr-4">
+				<v-slider v-model="mileRadius" class="align-center" :max="max" :min="min" hide-details>
+					<template v-slot:append>
+						<v-text-field
+							v-model="mileRadius"
+							class="mt-0 pt-0"
+							hide-details
+							single-line
+							type="number"
+							style="width: 60px"
+						></v-text-field>
+					</template>
+				</v-slider>
+			</v-col>
+		</v-row>
 
-  <v-footer
-      absolute
-      class="font-weight-medium navigator-footer"
-    >
-      <v-col
-        class="text-center"
-        cols="12"
-      >
-        <Navigator previousRoute="skills" nextRoute="complete"></Navigator>
-  
-      </v-col>
-  </v-footer>
-
-</v-container>
-  
-  
+		<v-footer absolute class="font-weight-medium navigator-footer">
+			<v-col class="text-center" cols="12">
+				<Navigator previousRoute="skills" nextRoute="complete"></Navigator>
+			</v-col>
+		</v-footer>
+	</v-container>
 </template>
 <script lang="ts">
 import Vue from 'vue';
 import Navigator from '../../components/global/Navigator/Navigator.vue';
-const zipcodes =  require('zipcodes');
+const zipcodes = require('zipcodes');
 export default Vue.extend({
-  components: {
-    Navigator,
-  },
-  data() {
-    return {
-      location: {},
-      zipCode: null,
-      min: 0,
-      max: 100,
-      mileRadius: 40,
-      range: [0, 100],
-    };
-  },
-  methods: {
-    getUserLocation() {
-        navigator.geolocation.getCurrentPosition((pos) => {
-        this.location = pos.coords;
-      }, (err) => {
-        // console.log(err);
-      });
-    },
-    getZipcodeLocation() {
-      this.location = zipcodes.lookup(this.zipCode);
-    },
-  },
+	components: {
+		Navigator,
+	},
+	data() {
+		return {
+			location: {},
+			zipCode: null,
+			min: 0,
+			max: 100,
+			mileRadius: 40,
+			range: [0, 100],
+		};
+	},
+	methods: {
+		getUserLocation() {
+			navigator.geolocation.getCurrentPosition(
+				(pos) => {
+					this.location = pos.coords;
+				},
+				(err) => {
+					// console.log(err);
+				},
+			);
+		},
+		getZipcodeLocation() {
+			this.location = zipcodes.lookup(this.zipCode);
+		},
+	},
 });
 </script>
 
 <style lang="scss">
-  @import './_Location.scss';
+@import './_Location.scss';
 </style>
-

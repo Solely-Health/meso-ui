@@ -9,7 +9,9 @@ import Logo from './components/Logo.vue';
 import Skills from './views/skills/Skills.vue';
 import Location from './views/location/Location.vue';
 import RegistrationComplete from './views/registration_complete/Registration_Complete.vue';
+import Profile from './views/profile/Profile.vue';
 import Discover from './views/discover/Discover.vue';
+import Position from './views/position/Position.vue';
 Vue.use( Router );
 
 export default new Router( {
@@ -64,9 +66,19 @@ export default new Router( {
       component: FacilityCard,
     },
     {
+      path: '/profile',
+      name: 'Profile',
+      component: Profile,
+    },
+    {
       path: '/discover',
       name: 'Discover',
       component: Discover,
+    },
+    {
+      path: '/position',
+      name: 'Position',
+      component: Position,
     },
   ],
 } );
