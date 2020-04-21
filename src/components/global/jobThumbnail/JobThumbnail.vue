@@ -7,12 +7,12 @@
             <v-icon x-large class="grey lighten-3">mdi-map-marker</v-icon>
           </v-list-item-avatar>
           <v-list-item-content>
-            <v-list-item-title class="font-weight-bold mt-4 mb-1">
-              {{ position }}
-              <router-link to="/position">
-                <v-icon color="green">mdi-arrow-right-bold-circle-outline</v-icon>
-              </router-link>
-            </v-list-item-title>
+            <router-link tag="span" to="/position">
+              <v-list-item-title class="font-weight-bold mt-4 mb-1">
+                {{ position }}
+                  <v-icon color="green">mdi-arrow-right-bold-circle-outline</v-icon>
+              </v-list-item-title>
+            </router-link>
             <v-list-item-subtitle class="mb--1">{{ locationName }}</v-list-item-subtitle>
             <v-list-item-title>{{ startTime }} - {{ endTime }}</v-list-item-title>
             <v-list-item-subtitle no-gutters>{{ date }}</v-list-item-subtitle>
@@ -35,8 +35,8 @@ export default {
     locationName: String,
     startTime: String,
     endTime: String,
-    date: String
-  }
+    date: String,
+  },
 };
 </script>
 <style lang="scss">
