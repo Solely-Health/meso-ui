@@ -11,6 +11,7 @@
       :endTime="result.endTime"
       :date="result.date"
       router
+      to:='position'
       />
 	</v-container>
 </template>

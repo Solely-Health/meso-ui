@@ -11,7 +11,7 @@
       :startTime="result.startTime"
       :endTime="result.endTime"
       :date="result.date"
-      router
+      router :to="result.link"
       />
 	</v-container>
 </template>
@@ -30,6 +30,8 @@ export default Vue.extend({
         startTime: '10:00AM',
         endTime: '2:00PM',
         date: '4/20/2020',
+        link: 'position',
+        // link: {name: 'Position'}
       },
       {
         id: 2,
@@ -53,7 +55,7 @@ export default Vue.extend({
   components: {
     FacilityCard,
     JobSearchBar,
-    JobThumbnail
+    JobThumbnail,
   },
 });
 </script>
