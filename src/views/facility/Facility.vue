@@ -1,51 +1,59 @@
 <template>
 	<v-container>
-		<facility-card></facility-card>
-    <v-layout align-center justify-center>
-      <v-card class="ma-5">
-        <v-card-title>Description</v-card-title>
-        <v-card-subtitle>{{description}}</v-card-subtitle>
-      </v-card>
-    </v-layout>
-    <v-layout align-center justify-center>
-      <v-card class="ma-5">
-        <v-card-title>Certificates</v-card-title>
-        <v-flex wrap>
-          <v-chip close v-for="license in licenses" 
-            :key="license" 
-            class="chips pa-3 ma-2"
-            color="#75b78c"
-            text-color="white">{{license}}</v-chip>
-        </v-flex>
-      </v-card>
-    </v-layout>
-    <v-layout align-center justify-center>
-      <v-card class="ma-5">
-        <v-card-title>Skills</v-card-title>
-        <v-flex wrap>
-          <v-chip close v-for="skill in skills" 
-            :key="skill"
-            class="chips pa-3 ma-2"
-            color="#75b78c"
-            text-color="white">{{skill}}</v-chip>
-        </v-flex>
-      </v-card>
-    </v-layout>
-
-    
+		<facility-card></facility-card>    
+    <job-search-bar></job-search-bar>
+    <job-thumbnail
+      v-for="result in results"
+      :key="result.title"
+      :id="result.id"
+      :position="result.position"
+      :locationName="result.locationName"
+      :startTime="result.startTime"
+      :endTime="result.endTime"
+      :date="result.date"
+      router
+      />
 	</v-container>
 </template>
 <script lang="ts">
 import Vue from 'vue';
 import FacilityCard from './../../components/FacilityCard/FacilityCard.vue';
+import JobSearchBar from './../../components/global/jobSearchBar/JobSearchBar.vue';
+import JobThumbnail from './../../components/global/jobThumbnail/JobThumbnail.vue';
 export default Vue.extend({
   data: () => ({
-        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
-        licenses: ['CPR' , 'Respritory Therapist', 'Registered Nurse'],
-        skills: ['Patient monitoring systems' , 'Vital sign monitoring', 'Ethical', 'Diagnostic Equipment', 'Strict Attention To Detail'],
+    results: [
+      {
+        id: 1,
+        position: 'Respiratory Therapist',
+        locationName: 'West Hills Hospital',
+        startTime: '10:00AM',
+        endTime: '2:00PM',
+        date: '4/20/2020',
+      },
+      {
+        id: 2,
+        position: 'Respiratory Therapist',
+        locationName: 'West Hills Hospital',
+        startTime: '11:00PM',
+        endTime: '11:00AM',
+        date: '5/23/2020',
+      },
+      {
+        id: 3,
+        position: 'Respiratory Therapist',
+        locationName: 'West Hills Hospital',
+        startTime: '11:00PM',
+        endTime: '11:00AM',
+        date: '5/25/2020',
+      },
+    ],
+
 }),
   components: {
     FacilityCard,
+    JobSearchBar,
+    JobThumbnail
   },
 });
 </script>
