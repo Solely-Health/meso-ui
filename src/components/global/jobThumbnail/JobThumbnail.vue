@@ -1,8 +1,8 @@
 <template>
   <v-row>
     <v-col justify-center cols="12" sm="6" offset-sm="3" md="6" offset-md="3" lg="4" offset-lg="4">
-      <v-card class="mx-auto" tile>
-        <v-list-item three-line>
+      <v-card class="mx-auto" tile >
+        <v-list-item three-line  @click="$router.push('facility')">
           <v-list-item-avatar tile rounded size="90" class="mt-8 rounded">
             <v-icon x-large class="grey lighten-3">mdi-map-marker</v-icon>
           </v-list-item-avatar>

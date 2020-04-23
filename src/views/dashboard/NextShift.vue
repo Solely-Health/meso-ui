@@ -1,6 +1,6 @@
 <template>
   <v-card class="mx-auto" tile>
-    <v-list-item three-line>
+    <v-list-item three-line  @click="$router.push('facility')">
       <v-list-item-avatar tile rounded size="90" class="mt-8 rounded">
         <v-icon x-large class="grey lighten-3">mdi-map-marker</v-icon>
       </v-list-item-avatar>

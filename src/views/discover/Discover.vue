@@ -2,6 +2,7 @@
 	<v-container>
     <job-search-bar></job-search-bar>
 		<job-thumbnail
+    
       v-for="result in results"
       :key="result.title"
       :id="result.id"
@@ -10,8 +11,6 @@
       :startTime="result.startTime"
       :endTime="result.endTime"
       :date="result.date"
-      router
-      to:='position'
       />
 	</v-container>
 </template>

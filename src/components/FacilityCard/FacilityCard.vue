@@ -1,7 +1,7 @@
 <template>
     <v-container>
         <v-layout align-center justify-center>
-            <v-card @click="facilityPage" class="ma-5">
+            <v-card class="ma-5">
                 <v-img 
                     src="https://staticmapmaker.com/img/google@2x.png" 
                     height="180px"
