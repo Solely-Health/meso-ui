@@ -12,6 +12,7 @@ import RegistrationComplete from './views/registration_complete/Registration_Com
 import Profile from './views/profile/Profile.vue';
 import Discover from './views/discover/Discover.vue';
 import Position from './views/position/Position.vue';
+import DayOffModal from './components/DayOffModal/DayOffModal.vue';
 Vue.use( Router );
 
 export default new Router( {
@@ -79,6 +80,11 @@ export default new Router( {
       path: '/position',
       name: 'Position',
       component: Position,
+    },
+    {
+      path: '/dayoffmodal',
+      name: 'dayoffmodal',
+      component: DayOffModal,
     },
   ],
 } );
