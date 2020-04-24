@@ -3,7 +3,15 @@ import App from './App.vue';
 import router from './router';
 import store from './store/index';
 import vuetify from './plugins/vuetify';
+import MESO from './config';
+import axios from 'axios';
 
+// ---------------------------------------------------------
+// AXIOS: API CONFIGURATION
+// ---------------------------------------------------------
+
+axios.defaults.baseURL = MESO.url;
+axios.defaults.headers = { 'Content-Type': 'application/json' };
 // import Vuetify from 'vuetify';
 // import 'vuetify/dist/vuetify.min.css';
 // Vue.use(Vuetify);
