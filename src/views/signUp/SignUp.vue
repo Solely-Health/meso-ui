@@ -34,39 +34,39 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import Navigator from "./../../components/global/Navigator/Navigator.vue";
-import { mapActions } from "vuex";
+import Vue from 'vue';
+import Navigator from './../../components/global/Navigator/Navigator.vue';
+import { mapActions } from 'vuex';
 export default Vue.extend({
   data() {
     return {
       form: {
-        email: "",
-        firstName: "",
-        lastName: "",
+        email: '',
+        firstName: '',
+        lastName: '',
         // TODO: change eventually, for now default
-        occupation: "nurse",
-        license: "123ABC"
+        occupation: 'nurse',
+        license: '123ABC',
       },
-      nextRoute: "license",
-      previouseRoute: "login",
-      education: ["California, State University Northridge", "cheese"],
-      currEducation: "",
-      subject: ["testSubject1", "testSubject2", "testSubject3"],
-      currSubject: "",
-      password: "",
-      confirmPass: ""
+      nextRoute: 'license',
+      previouseRoute: 'login',
+      education: ['California, State University Northridge', 'cheese'],
+      currEducation: '',
+      subject: ['testSubject1', 'testSubject2', 'testSubject3'],
+      currSubject: '',
+      password: '',
+      confirmPass: '',
     };
   },
   components: {
-    Navigator
+    Navigator,
   },
   methods: {
-    ...mapActions(["createUser","getAllUsers"]),
+    ...mapActions(['createUser', 'getAllUsers']),
     handleNextEvent(event) {
       this.createUser(this.form);
-    }
-  }
+    },
+  },
 });
 </script>
 

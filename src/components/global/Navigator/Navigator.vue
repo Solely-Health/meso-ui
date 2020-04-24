@@ -26,20 +26,18 @@
 export default {
   props: {
     previousRoute: String,
-    nextRoute: String
+    nextRoute: String,
   },
   methods: {
     nextClicked() {
-      console.log("nextClicked!");
-      this.$emit("next-clicked");
+      this.$emit('next-clicked');
       this.$router.push(this.nextRoute);
     },
     backClicked() {
-      console.log("backClicked!");
-      this.$emit("back-clicked");
+      this.$emit('back-clicked');
       this.$router.push(this.previousRoute);
-    }
-  }
+    },
+  },
 };
 </script>
 

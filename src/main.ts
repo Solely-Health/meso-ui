@@ -11,7 +11,7 @@ import axios from 'axios';
 // ---------------------------------------------------------
 
 axios.defaults.baseURL = MESO.url;
-axios.defaults.headers = { 'Content-Type': 'application/json' }
+axios.defaults.headers = { 'Content-Type': 'application/json' };
 // import Vuetify from 'vuetify';
 // import 'vuetify/dist/vuetify.min.css';
 // Vue.use(Vuetify);
