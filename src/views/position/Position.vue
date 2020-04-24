@@ -5,7 +5,7 @@
       <v-img class="white--text align-end" height="200px" src="./static-facility.png"></v-img>
       <v-card-title>Respiratory Therapist</v-card-title>
       <v-card-subtitle class="pb-0">
-        <a>West Hills Hospital</a>
+        <router-link :to="{name: 'Facility'}">West Hills Hospital</router-link>
       </v-card-subtitle>
 
       <v-card-text class="text--primary">

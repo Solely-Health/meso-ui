@@ -1,8 +1,8 @@
 <template>
 	<v-container>
+		<facility-card></facility-card>    
     <job-search-bar></job-search-bar>
-		<job-thumbnail
-    
+    <job-thumbnail
       v-for="result in results"
       :key="result.title"
       :id="result.id"
@@ -11,11 +11,13 @@
       :startTime="result.startTime"
       :endTime="result.endTime"
       :date="result.date"
+      router :to="result.link"
       />
 	</v-container>
 </template>
 <script lang="ts">
 import Vue from 'vue';
+import FacilityCard from './../../components/FacilityCard/FacilityCard.vue';
 import JobSearchBar from './../../components/global/jobSearchBar/JobSearchBar.vue';
 import JobThumbnail from './../../components/global/jobThumbnail/JobThumbnail.vue';
 export default Vue.extend({
@@ -28,11 +30,13 @@ export default Vue.extend({
         startTime: '10:00AM',
         endTime: '2:00PM',
         date: '4/20/2020',
+        link: 'position',
+        // link: {name: 'Position'}
       },
       {
         id: 2,
         position: 'Respiratory Therapist',
-        locationName: 'Cedar Sinai Hospital',
+        locationName: 'West Hills Hospital',
         startTime: '11:00PM',
         endTime: '11:00AM',
         date: '5/23/2020',
@@ -40,14 +44,16 @@ export default Vue.extend({
       {
         id: 3,
         position: 'Respiratory Therapist',
-        locationName: 'Valley Presbiterian Hospital',
+        locationName: 'West Hills Hospital',
         startTime: '11:00PM',
         endTime: '11:00AM',
         date: '5/25/2020',
       },
     ],
-  }),
+
+}),
   components: {
+    FacilityCard,
     JobSearchBar,
     JobThumbnail,
   },
@@ -55,5 +61,5 @@ export default Vue.extend({
 </script>
 
 <style lang="scss">
-@import "./_Discover.scss";
+@import "./_Facility.scss";
 </style>
