@@ -72,7 +72,7 @@
 
 		<v-footer absolute class="font-weight-medium navigator-footer">
 			<v-col class="text-center" cols="12">
-				<Navigator previousRoute="skills" nextRoute="complete"></Navigator>
+				<Navigator @next-clicked="handleNextEvent" previousRoute="skills" nextRoute="complete"></Navigator>
 			</v-col>
 		</v-footer>
 	</v-container>
@@ -80,6 +80,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import Navigator from '../../components/global/Navigator/Navigator.vue';
+import { mapActions } from 'vuex';
 const zipcodes = require('zipcodes');
 export default Vue.extend({
 	components: {
@@ -96,6 +97,7 @@ export default Vue.extend({
 		};
 	},
 	methods: {
+		...mapActions(['addLocation']),
 		getUserLocation() {
 			navigator.geolocation.getCurrentPosition(
 				(pos) => {
@@ -108,6 +110,9 @@ export default Vue.extend({
 		},
 		getZipcodeLocation() {
 			this.location = zipcodes.lookup(this.zipCode);
+		},
+		handleNextEvent(event) {
+			this.addLocation(this.location);
 		},
 	},
 });

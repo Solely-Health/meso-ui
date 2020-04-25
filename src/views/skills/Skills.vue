@@ -14,7 +14,6 @@
         :search-input.sync="search"
         hide-selected
         label="Add your skills"
-
         multiple
         persistent-hint
         small-chips
@@ -37,7 +36,7 @@
         class="text-center"
         cols="12"
       >
-        <Navigator previousRoute="license" nextRoute="location"></Navigator>
+        <Navigator @next-clicked="handleNextEvent" previousRoute="license" nextRoute="location"></Navigator>
   
       </v-col>
     </v-footer>
@@ -49,10 +48,10 @@
 <script lang="ts">
 import Vue from 'vue';
 import Navigator from '../../components/global/Navigator/Navigator.vue';
+import { mapActions } from 'vuex';
 
 export default Vue.extend({
   name: 'skills',
-
   data() {
     return {
       items: ['Gaming', 'Programming', 'Vue', 'Vuetify'],
@@ -62,6 +61,12 @@ export default Vue.extend({
   },
   components: {
     Navigator,
+  },
+  methods: {
+    ...mapActions(['addSkills']),
+    handleNextEvent(event) {
+      this.addSkills(this.skillsList);
+    },
   },
 });
 </script>
