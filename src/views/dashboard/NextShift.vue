@@ -20,14 +20,40 @@
     </v-list-item>
     <v-card-actions class="px-0 py-0 m-0">
       <v-spacer></v-spacer>
-      <v-btn class="mb-2" color="#80ACD3" fab small elevation="0">
+      <v-btn :href="locationMap" target="_blank" class="mb-2" color="#80ACD3" fab small elevation="0">
         <v-icon color="white">mdi-map-marker</v-icon>
       </v-btn>
-      <v-btn class="mb-2 mr-2" color="#75b78c" fab small elevation="0">
+      <v-btn class="mb-2 mr-2" color="#75b78c" fab small elevation="0" @click="dialog = !dialog">
         <v-icon color="white">mdi-phone</v-icon>
       </v-btn>
     </v-card-actions>
+    <v-dialog
+			class="v-dialog"
+				v-model="dialog"
+				max-width="500px"
+				scrollable
+			>
+				<v-card>
+          <v-card-title justify="center">
+            <span class="headline text-center">Phone Number</span>
+          </v-card-title>
+          <v-card-text>
+            <v-container>
+              <v-row align="center" justify="center">
+                <v-card-title primary-title>
+                  <a :href="`+1${phoneNumber}`">{{phoneNumber}}</a>
+                </v-card-title>
+              </v-row>
+            </v-container>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="blue darken-1 mb-5 ml-5" text @click="dialog = false">Close</v-btn>
+          </v-card-actions>
+        </v-card>
+			</v-dialog>
   </v-card>
+  
 </template>
 <script>
 export default {
@@ -38,6 +64,11 @@ export default {
     startTime: String,
     endTime: String,
     date: String,
+    locationMap: String,
+    phoneNumber: String,
   },
+  data: () => ({
+		dialog: false,
+	}),
 };
 </script>
