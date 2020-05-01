@@ -7,9 +7,9 @@
 			:id="result.PositionID"
 			:position="result.Title"
 			:locationName="result.FacilityTitle || 'Unavailable'"
-			:startTime="validateTime(result.StartDateTime)"
-			:endTime="validateTime(result.EndDateTime)"
-			:date="'MM/DD/YYYY'"
+			:startTime="validateTime(result.Start)"
+			:endTime="validateTime(result.End)"
+			:date="formatDate(result.StartDate, result.EndDate)"
 		/>
 	</v-container>
 </template>
@@ -57,9 +57,18 @@ export default Vue.extend({
 	},
 	methods: {
 		...mapActions(['getAllPositions']),
-    validateTime(time) {
-      return (Object.keys(time).length == 0 ? 'Time N/A' : time);
-    },
+		validateTime(time) {
+			return Object.keys(time).length === 0 ? 'Time N/A' : time;
+		},
+		formatDate(sDate, eDate) {
+      if(sDate === eDate){
+        const date = sDate.split('-');
+        return `${date[2]}/${date[1]}/${date[0]}`;
+      }
+      const startDate = sDate.split('-');
+      const endDate = eDate.split('-');
+      return `${startDate[2]}/${startDate[1]}/${startDate[0]} - ${endDate[2]}/${endDate[1]}/${endDate[0]}`;
+		},
 	},
 	components: {
 		JobSearchBar,
