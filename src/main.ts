@@ -10,7 +10,7 @@ import axios from 'axios';
 // AXIOS: API CONFIGURATION
 // ---------------------------------------------------------
 
-axios.defaults.baseURL = MESO.url;
+// axios.defaults.baseURL = MESO.url;
 axios.defaults.headers = { 'Content-Type': 'application/json' };
 // import Vuetify from 'vuetify';
 // import 'vuetify/dist/vuetify.min.css';

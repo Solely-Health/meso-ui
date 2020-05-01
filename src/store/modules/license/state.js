@@ -1,12 +1,12 @@
-
-import state from './state';
-import getters from './getters';
-import mutations from './mutations';
-import actions from './actions';
-
 export default {
-    state,
-    getters,
-    mutations,
-    actions
+    licenses: [{
+        licenseNumber: '',
+        checked: false,
+        valid: -1,
+        licenseType: {
+            boardCode: 0,
+            licenseName: 'Registered Nurse',
+            licenseCode: 224,
+        },
+    }],
 };
