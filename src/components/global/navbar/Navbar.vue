@@ -12,7 +12,7 @@
     </v-app-bar>
     <v-navigation-drawer
         v-model="drawer"
-        absolute
+        fixed
         width="50%"
         temporary
         color="#6A8EAE"
