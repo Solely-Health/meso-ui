@@ -1,5 +1,3 @@
 export default {
-    userInfo: {},
-    licenses: [],
-    location: {},
+    discoverJobs: [],
 };
