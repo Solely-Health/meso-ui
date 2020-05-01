@@ -32,6 +32,8 @@ export default Vue.extend({
 			startTime: '10:00AM',
 			endTime: '2:00PM',
 			date: '',
+			phoneNumber: '(818) 676-4000',
+			locationMap: 'https://www.google.com/maps/dir//West+Hills+Hospital+and+Medical+Center,+7300+Medical+Center+Dr,+West+Hills,+CA+91307/@34.1897213,-118.724557,10z/data=!4m9!4m8!1m0!1m5!1m1!1s0x80c29db3ae29c899:0xd606d9769cbbdfcb!2m2!1d-118.6292184!2d34.202827!3e0',
 		},
 	}),
 	components: {
