@@ -22,7 +22,7 @@ const addSkillsAPI = (payload, success, error) => {
 };
 
 const addLocationAPI = (payload, success, error)=> {
-    axios.post(urls.mock_url + 'worker/location/v1/', payload).then(
+    axios.post(urls.url + 'worker/v1/location/update', payload).then(
         response => success(response.data),
         response => success(response.data),
     )

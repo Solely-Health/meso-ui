@@ -30,7 +30,9 @@ export default {
       ()=> dispatch(),
     );
   },
-  addLocation({commit, dispatch}, payload) {
+  addLocation({commit, dispatch, state}, payload) {
+    payload.workerId = state.userInfo.workerId;
+    console.log(payload);
     Signup.addLocationAPI(
       payload,
       (success) => {

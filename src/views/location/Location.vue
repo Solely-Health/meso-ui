@@ -63,6 +63,8 @@
 							hide-details
 							single-line
 							type="number"
+							:thumb-size="24"
+							thumb-label="always"
 							style="width: 60px"
 						></v-text-field>
 					</template>
@@ -80,20 +82,24 @@
 <script lang="ts">
 import Vue from 'vue';
 import Navigator from '../../components/global/Navigator/Navigator.vue';
-import { mapActions } from 'vuex';
+import { mapActions, mapState } from 'vuex';
 const zipcodes = require('zipcodes');
 export default Vue.extend({
 	components: {
 		Navigator,
 	},
-	data() {
+	data: () => {
 		return {
-			location: {},
 			zipCode: null,
 			min: 0,
+			mileRadius: 20,
 			max: 100,
-			mileRadius: 40,
 			range: [0, 100],
+			workerLocation: {
+				latitude: '',
+				longitude: '',
+				mileRadius: '',
+			},
 		};
 	},
 	methods: {
@@ -101,7 +107,10 @@ export default Vue.extend({
 		getUserLocation() {
 			navigator.geolocation.getCurrentPosition(
 				(pos) => {
-					this.location = pos.coords;
+					const currLocation = pos.coords;
+					this.workerLocation.latitude = pos.coords.latitude + '';
+					this.workerLocation.longitude = pos.coords.longitude + '';
+
 				},
 				(err) => {
 					// console.log(err);
@@ -109,10 +118,13 @@ export default Vue.extend({
 			);
 		},
 		getZipcodeLocation() {
-			this.location = zipcodes.lookup(this.zipCode);
+			const currLocation = zipcodes.lookup(this.zipCode);
+			this.workerLocation.latitude = currLocation.latitude;
+			this.workerLocation.longitude = currLocation.longitude;
 		},
 		handleNextEvent(event) {
-			this.addLocation(this.location);
+			this.workerLocation.mileRadius = this.mileRadius + '';
+			this.addLocation(this.workerLocation);
 		},
 	},
 });

@@ -1,5 +1,10 @@
 export default {
-    userInfo: {},
-    licenses: [],
-    location: {},
+    userInfo: {
+        email:"",
+        firstName:"",
+        lastName:"",
+        license:"",
+        occupation:"",
+        workerId:"",
+    },
 }

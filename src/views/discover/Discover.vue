@@ -52,7 +52,7 @@ export default Vue.extend({
 	},
 	computed: {
 		...mapState({
-			discoverJobs: (state) => state.job.discoverJobs,
+			discoverJobs: (state: any) => state.job.discoverJobs,
 		}),
 	},
 	methods: {
@@ -61,7 +61,7 @@ export default Vue.extend({
 			return Object.keys(time).length === 0 ? 'Time N/A' : time;
 		},
 		formatDate(sDate, eDate) {
-      if(sDate === eDate){
+      if (sDate === eDate) {
         const date = sDate.split('-');
         return `${date[2]}/${date[1]}/${date[0]}`;
       }

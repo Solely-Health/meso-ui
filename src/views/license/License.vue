@@ -64,6 +64,8 @@ export default Vue.extend({
 	},
 	computed: mapState({
 		licenses: (state: any) => state.license.licenses,
+		userInfo: (state: any) => state.worker.userInfo,
+
 	}),
 	methods: {
 		...mapActions(['verifyLicenses', 'addLicensesToUserInfo']),
@@ -82,8 +84,8 @@ export default Vue.extend({
 			this.verifyLicenses({
 				licenses: this.licenses,
 				userInfo: {
-					firstName: 'First',
-					lastName: 'Last',
+					firstName: this.userInfo.firstName,
+					lastName: this.userInfo.lastName,
 				},
 			});
 		},
