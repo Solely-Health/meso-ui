@@ -53,7 +53,6 @@
         </v-card>
 			</v-dialog>
   </v-card>
-  
 </template>
 <script>
 export default {

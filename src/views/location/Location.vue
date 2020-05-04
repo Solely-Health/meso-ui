@@ -41,6 +41,7 @@
     <v-col col=6 sm=3 md =2>
       <v-btn
           class="mr-4 mt-2"
+					:disabled="zipCode.length < 5"
           v-on:click="getZipcodeLocation()"
         >
         Locate me
@@ -71,12 +72,33 @@
 				</v-slider>
 			</v-col>
 		</v-row>
-
 		<v-footer absolute class="font-weight-medium navigator-footer">
 			<v-col class="text-center" cols="12">
 				<Navigator @next-clicked="handleNextEvent" previousRoute="skills" nextRoute="complete"></Navigator>
 			</v-col>
 		</v-footer>
+		<v-dialog
+			class="v-dialog"
+				v-model="dialog"
+				max-width="500px"
+				scrollable
+			>
+				<v-card>
+          <v-card-text>
+            <v-container>
+              <v-row align="center" justify="center">
+                <v-card-title primary-title>
+									Location successfully added!
+                </v-card-title>
+              </v-row>
+            </v-container>
+          </v-card-text>
+          <v-card-actions>
+            <v-spacer></v-spacer>
+            <v-btn color="blue darken-1 mb-5 ml-5" text @click="dialog = false">Close</v-btn>
+          </v-card-actions>
+        </v-card>
+			</v-dialog>
 	</v-container>
 </template>
 <script lang="ts">
@@ -90,7 +112,8 @@ export default Vue.extend({
 	},
 	data: () => {
 		return {
-			zipCode: null,
+			dialog: false,
+			zipCode: '',
 			min: 0,
 			mileRadius: 20,
 			max: 100,
@@ -110,7 +133,7 @@ export default Vue.extend({
 					const currLocation = pos.coords;
 					this.workerLocation.latitude = pos.coords.latitude + '';
 					this.workerLocation.longitude = pos.coords.longitude + '';
-
+					this.dialog = true;
 				},
 				(err) => {
 					// console.log(err);
@@ -119,8 +142,10 @@ export default Vue.extend({
 		},
 		getZipcodeLocation() {
 			const currLocation = zipcodes.lookup(this.zipCode);
-			this.workerLocation.latitude = currLocation.latitude;
-			this.workerLocation.longitude = currLocation.longitude;
+			this.workerLocation.latitude = currLocation.latitude + '';
+			this.workerLocation.longitude = currLocation.longitude + '';
+			this.dialog = true;
+
 		},
 		handleNextEvent(event) {
 			this.workerLocation.mileRadius = this.mileRadius + '';
