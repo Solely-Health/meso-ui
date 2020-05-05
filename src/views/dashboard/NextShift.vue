@@ -55,6 +55,7 @@
   </v-card>
 </template>
 <script>
+import { mapActions, mapState } from 'vuex';
 export default {
   props: {
     id: Number,
@@ -68,6 +69,9 @@ export default {
   },
   data: () => ({
 		dialog: false,
+  }),
+  computed: mapState({
+		schedule: (state) => state.schedule,
 	}),
 };
 </script>
